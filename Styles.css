@@ -44,6 +44,14 @@ body {
 .btn:hover {
     transform: scale(1.1);
     background: #ff66cc;
+    
+}
+.birthday-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin-top: 20px;
+    animation: bounceIn 1s ease-in-out;
 }
 
 .hidden {
