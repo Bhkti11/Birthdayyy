@@ -1,55 +1,89 @@
 body {
-    background-color: #fef9e7;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    color: #ff6f61;
-    text-align: center;
-    padding: 50px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ffcc00, #ff66cc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    background-color: #fff3e0;
-    border-radius: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    max-width: 90%;
+    animation: fadeIn 2s ease-in-out;
 }
 
-h1 {
+.title {
     font-size: 2.5em;
-    margin-bottom: 20px;
+    color: #ff4081;
+    animation: textGlow 2s ease-in-out infinite alternate;
 }
 
-p {
+.subtitle {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    color: #333;
 }
 
-button {
-    padding: 10px 20px;
+.btn {
+    padding: 15px 30px;
     font-size: 1.2em;
-    color: #fff;
-    background-color: #ff6f61;
+    color: white;
+    background: #ff4081;
     border: none;
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease-in-out;
 }
 
-button:hover {
-    background-color: #ff4f41;
+.btn:hover {
+    transform: scale(1.1);
+    background: #ff66cc;
 }
 
 .hidden {
     display: none;
 }
 
-#message {
+.birthday-img {
+    width: 100%;
+    border-radius: 15px;
     margin-top: 20px;
-    animation: fadeIn 2s ease-in-out;
+    animation: bounceIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes textGlow {
+    from {
+        text-shadow: 0px 0px 10px #ff4081, 0px 0px 20px #ff4081, 0px 0px 30px #ff4081;
+    }
+    to {
+        text-shadow: 0px 0px 20px #ff66cc, 0px 0px 30px #ff66cc, 0px 0px 40px #ff66cc;
+    }
+}
+
+@keyframes bounceIn {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
